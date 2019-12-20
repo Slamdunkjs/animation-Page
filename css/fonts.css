@@ -1,0 +1,23 @@
+*{
+  font-family: HelveticaNeue, Arial, sans-serif;
+}
+
+.field, .submit{
+  font-size: 32px;
+}
+
+.checkbox{
+  font-size: 26px;
+}
+
+p{
+  font-size: 30px;
+}
+
+h1{
+  font-size: 60px;
+}
+
+.checkbox i{
+  font-size: 16px;
+}

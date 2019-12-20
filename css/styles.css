@@ -1,0 +1,285 @@
+* {
+	padding: 0;
+	margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: url("../img/fon1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.load{
+  width: 100%;
+  height: 100%;
+  background: #e5e5e5;
+  animation: load 2s forwards;
+}
+
+@keyframes load{
+  0%{
+    opacity: 1;
+  }
+
+  50%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+  }
+}
+
+.divForm{
+  width: 720px;
+  margin: auto;
+  line-height: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) perspective(500px);
+  transform-style: preserve-3d;
+}
+
+
+.allDivForAnimation{
+  position: relative;
+  background: rgba(255 , 255, 255, 0.9);
+  box-shadow: 0px 0px 24px 18px rgba(0,0,0,0.29);
+  transform-origin: 0 0;
+  transform: perspective(500px);
+  transform-style: preserve-3d;
+  animation: start 1s forwards;
+}
+
+@keyframes start{
+  0%{
+    transform: rotateX(-45deg);
+    opacity: 0;
+  }
+
+  75%{
+    transform: rotateX(1deg);
+    opacity: 0.75;
+  }
+
+  100%{
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+.cubes{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%) perspective(500px);
+  transform-style: preserve-3d;
+}
+
+.cubesAnimation{
+  width: inherit;
+  height: inherit;
+  position: relative;
+  background: white;
+  box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.05);
+  border-radius: 20%;
+  animation: divCubesAnimation 1s forwards;
+  transform-style: preserve-3d;
+  /* mix-blend-mode: multiply; */
+}
+
+@keyframes divCubesAnimation{
+  0%{
+    transform: rotateX(90deg) scale(1.5);
+  }
+
+  100%{
+    transform: rotateX(0) scale(1);
+  }
+}
+
+.miniCube{
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  position: absolute;
+  /* mix-blend-mode: multiply; */
+}
+
+.pink{
+  background: rgba(209 , 54, 156, 0.80);
+  left: 43.75%; 
+  bottom: 43.75%;
+  animation: pinkAnimation 1s forwards;
+}
+
+@keyframes pinkAnimation{
+  0%{
+    transform:translateZ(50px);
+    opacity: 0;
+  }
+
+  100%{
+    transform:translateZ(0);
+    opacity: 1;
+  }
+}
+
+.orange{
+  background: rgba(248,145,29,0.80);
+  left: 31.25%;
+  top: 18.75%;
+  animation: orangeAnimation 1s forwards;
+}
+
+@keyframes orangeAnimation{
+  0%{
+    transform:translateZ(100px);
+    opacity: 0;
+  }
+
+  100%{
+    transform:translateZ(0);
+    opacity: 1;
+  }
+}
+
+.blue{
+  background: rgba(62,159,253,0.80);
+  left: 31.25%;
+  top: 43.75%;
+  animation: blueAnimation 1s forwards;
+}
+
+@keyframes blueAnimation{
+  0%{
+    transform:translateZ(25px);
+    opacity: 0;
+  }
+
+  100%{
+    transform:translateZ(0);
+    opacity: 1;
+  }
+}
+
+.green{
+  background: rgba(78,191,73,0.80);
+  left: 43.75%;
+  bottom: 18.75%;
+  animation: greenAnimation 1s forwards;
+}
+
+@keyframes greenAnimation{
+  0%{
+    transform:translateZ(75px);
+    opacity: 0;
+  }
+
+  100%{
+    transform:translateZ(0);
+    opacity: 1;
+  }
+}
+
+h1, p{
+  text-align: center;
+}
+
+h1{
+  text-transform: uppercase;
+  display: block;
+  padding-bottom: 10px;
+}
+
+p{
+  color: #787b79;
+}
+
+form{
+  padding: 60px;
+}
+
+.field {
+	display: block;
+  width: 100%;
+  height: 75px;
+  margin-bottom: 40px;
+  color: #636363;
+  padding: 0 10px;
+  border: 2px solid #636363;
+}
+
+.field:focus{
+  border: 2px solid #3e9ffd;
+}
+
+.submit{
+  width: 100%;
+  height: 80px;
+  margin-top: 60px;
+  background: #3e9ffd;
+  border: 0;
+  color: white;
+}
+
+.submit:hover, .checkbox{
+  cursor: pointer;
+}
+
+.nameForm{
+  padding-top: 150px;
+}
+
+.checkbox{
+  color: #636363;
+  position: relative;
+}
+
+.checkbox input[type="checkbox"]{
+  display: none;
+}
+
+.custom-checkbox{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #636363;
+  border-radius: 20%;
+	position: relative;
+}
+
+.checkbox i{
+  display: none;
+  color: white;
+}
+
+.checkbox input[type="checkbox"]:checked + span {
+  background: #5394fb;
+  border: 1px solid #5394fb;
+}
+
+.checkmark {
+  position: absolute;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: -20px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
